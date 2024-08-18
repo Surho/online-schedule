@@ -1,0 +1,30 @@
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+*, :before, :after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 100%;
+  overflow: hidden;
+  min-width: 320px;
+  max-width: 1250px;
+  margin: 0 auto;
+
+  @media (max-width: $breakpoint-md) {
+    padding: 0 40px 0 40px
+  }
+  @media (max-width: $breakpoint-sm) {
+    padding: 0 28px 0 28px
+  }
+  @media (max-width: $breakpoint-xs) {
+    padding: 0 20px 0 20px
+  }
+}

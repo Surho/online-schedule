@@ -9,12 +9,11 @@ defineProps({
   event: {
     type: [Object, null],
     default: null,
-  }
+  },
 });
 </script>
 
 <style lang="scss">
 .event-card {
-
 }
 </style>

@@ -2,7 +2,9 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: {enabled: true},
-  components: true,
+  plugins: [
+    '@/plugins/vue-json-pretty'
+  ],
   app: {
     head: {
       title: 'online-schedule',
@@ -18,4 +20,25 @@ export default defineNuxtConfig({
     }
   },
   modules: ['@pinia/nuxt'],
+  pinia: {
+    storesDirs: ['./stores/**'],
+  },
+  css: [
+    'vue-json-pretty/lib/styles.css',
+    '~/assets/scss/global.scss',
+  ],
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `
+            @use "~/assets/scss/partials/_colors.scss" as *;
+            @use "~/assets/scss/partials/_typography.scss" as *;
+            @use "~/assets/scss/partials/_breakpoints.scss" as *;
+            @use "~/assets/scss/partials/_anim.scss" as *;
+          `
+        }
+      }
+    }
+  }
 });

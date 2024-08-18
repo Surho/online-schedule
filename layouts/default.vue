@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Сегодня {{ new Date().getDay() }}</p>
+    Это онлайн расписание
     <slot />
   </div>
 </template>

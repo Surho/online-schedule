@@ -1,0 +1,14 @@
+@keyframes gelatine {
+  from, to {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.95, 1);
+  }
+  50% {
+    transform: scale(1.02, 1);
+  }
+  75% {
+    transform: scale(0.98, 1);
+  }
+}
